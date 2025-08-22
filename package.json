@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "npm run datasources && npm run sitemap",
-    "build": "vite build",
+    "build": "node scripts-dist/datasources.js && vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
